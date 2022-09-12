@@ -1,0 +1,39 @@
+<div class="container">
+    <h1>Ordenes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col" *ngFor="let head of headElements">{{head}}</th>
+            </tr>
+        </thead>
+        <tbody *ngIf="true">
+            <tr *ngFor="let el of elements">
+                <td data-label="Account">{{el.name}}</td>
+                <td data-label="Due Date">{{el.date}}</td>
+                <td data-label="Amount">{{el.total}}</td>
+                <td data-label="Period">{{el.isCanceled}}</td>
+                <td data-label="Amount">{{el.isDone}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                    <button type="button" class="btn btn-primary" (click)="RegistrarPersonal()">Editar</button>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+
+        <button type="button" class="btn btn-secondary">Atrás</button>
+        <button type="button" class="btn btn-secondary">Siguiente</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-success" (click)="addEvaluation()">Agregar</button>
+    </div>
+
+
+</div>
